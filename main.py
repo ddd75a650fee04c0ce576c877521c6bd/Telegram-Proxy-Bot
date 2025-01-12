@@ -8,10 +8,10 @@ from dotenv import load_dotenv
 
 # Configuração do token
 if 'TOKEN' in os.environ:
-    TOKEN = os.environ['TOKEN']  # Para Replit ou outro ambiente com variável de ambiente direta
+    TOKEN = os.environ['TOKEN']  # Para o Replit
 else:
     load_dotenv()  # Carrega variáveis do arquivo .env
-    TOKEN = os.getenv('TOKEN')  # Nome da variável no .env é "TOKEN"
+    TOKEN = os.getenv('TOKEN')  # .env local
 
 if not TOKEN:
     raise ValueError("Token não encontrado! Configure a variável 'TOKEN' corretamente no .env ou no ambiente.")
