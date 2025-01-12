@@ -3,10 +3,19 @@ from datetime import datetime, timedelta
 import requests
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Application, CommandHandler, CallbackQueryHandler, ContextTypes
+import os
 
-# Configuração do token e logging
-my_secret = os.getenv('token')  # Carrega o token do arquivo .env
-my_secret = os.environ['token']  # Para Replit (ou outro ambiente)
+# Carrega o token dependendo do ambiente
+if 'token' in os.environ:
+    token = os.environ['token']  # Para Replit ou outro ambiente com variável de ambiente direta
+else:
+    from dotenv import load_dotenv
+    load_dotenv()  # Carrega variáveis do arquivo .env
+    token = os.getenv('token')
+
+# Verifica se o token foi carregado com sucesso
+if not token:
+    raise ValueError("Token não encontrado! Configure a variável 'token' corretamente no .env ou no ambiente.")
 
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
@@ -26,7 +35,7 @@ LANGUAGES = {
         'language_changed': "Language changed to English.",
         'mtproto_msg': "Here are your MTProto proxies:",
         'socks_msg': "Here are your SOCKS proxies:",
-        'no_proxies_msg': "No proxies available at the moment. Please try again later.",
+        'no_proxies': "No proxies are currently available.",
         'country': "Country",
         'host': "Host",
         'port': "Port",
@@ -48,8 +57,8 @@ LANGUAGES = {
         'switch_to_socks': "Trocar para SOCKS",
         'language_changed': "Idioma alterado para português.",
         'mtproto_msg': "Aqui estão seus proxies MTProto:",
-        'socks_msg': "Aqui estão seus SOCKS proxies:",
-        'no_proxies_msg': "Nenhum proxy disponível no momento. Por favor, tente novamente mais tarde.",
+        'socks_msg': "Aqui estão seus proxies SOCKS:",
+        'no_proxies': "Nenhum proxy está disponível no momento.",
         'country': "País",
         'host': "Host",
         'port': "Porta",
@@ -61,6 +70,98 @@ LANGUAGES = {
         'added_on': "Adicionado em",
         'choose_language': "Por favor, escolha seu idioma:"
     },
+    'es': {
+        'greeting': "¡Hola! Elige una opción:",
+        'mtproto_button': "Proxies MTProto",
+        'socks_button': "Proxies SOCKS",
+        'refresh_button': "Actualizar",
+        'connect': "Conectar a",
+        'switch_to_mtproto': "Cambiar a MTProto",
+        'switch_to_socks': "Cambiar a SOCKS",
+        'language_changed': "Idioma cambiado a español.",
+        'mtproto_msg': "Aquí están tus proxies MTProto:",
+        'socks_msg': "Aquí están tus SOCKS proxies:",
+        'no_proxies': "No hay proxies disponibles en este momento.",
+        'country': "País",
+        'host': "Host",
+        'port': "Puerto",
+        'secret': "Secreto",
+        'uptime': "Tiempo activo",
+        'ping': "Ping",
+        'upload': "Subida",
+        'download': "Descarga",
+        'added_on': "Añadido en",
+        'choose_language': "Por favor, elige tu idioma:"
+    },
+    'ru': {
+        'greeting': "Привет! Выберите опцию:",
+        'mtproto_button': "MTProto прокси",
+        'socks_button': "SOCKS прокси",
+        'refresh_button': "Обновить",
+        'connect': "Подключиться к",
+        'switch_to_mtproto': "Переключиться на MTProto",
+        'switch_to_socks': "Переключиться на SOCKS",
+        'language_changed': "Язык изменён на русский.",
+        'mtproto_msg': "Вот ваши MTProto прокси:",
+        'socks_msg': "Вот ваши SOCKS прокси:",
+        'no_proxies': "В настоящее время нет доступных прокси.",
+        'country': "Страна",
+        'host': "Хост",
+        'port': "Порт",
+        'secret': "Секрет",
+        'uptime': "Время работы",
+        'ping': "Пинг",
+        'upload': "Загрузка",
+        'download': "Скачивание",
+        'added_on': "Добавлено",
+        'choose_language': "Пожалуйста, выберите язык:"
+    },
+    'ar': {
+        'greeting': "مرحبًا! اختر خيارًا:",
+        'mtproto_button': "بروكسي MTProto",
+        'socks_button': "بروكسي SOCKS",
+        'refresh_button': "تحديث",
+        'connect': "اتصل بـ",
+        'switch_to_mtproto': "التبديل إلى MTProto",
+        'switch_to_socks': "التبديل إلى SOCKS",
+        'language_changed': "تم تغيير اللغة إلى العربية.",
+        'mtproto_msg': "ها هي بروكسيات MTProto الخاصة بك:",
+        'socks_msg': "ها هي بروكسيات SOCKS الخاصة بك:",
+        'no_proxies': "لا توجد بروكسيات متاحة حاليًا.",
+        'country': "الدولة",
+        'host': "المضيف",
+        'port': "المنفذ",
+        'secret': "السر",
+        'uptime': "وقت التشغيل",
+        'ping': "وقت الاستجابة",
+        'upload': "الرفع",
+        'download': "التنزيل",
+        'added_on': "تمت الإضافة في",
+        'choose_language': "يرجى اختيار لغتك:"
+    },
+    'zh': {
+        'greeting': "你好！选择一个选项：",
+        'mtproto_button': "MTProto代理",
+        'socks_button': "SOCKS代理",
+        'refresh_button': "刷新",
+        'connect': "连接到",
+        'switch_to_mtproto': "切换到MTProto",
+        'switch_to_socks': "切换到SOCKS",
+        'language_changed': "语言已更改为中文。",
+        'mtproto_msg': "这是您的MTProto代理：",
+        'socks_msg': "这是您的SOCKS代理：",
+        'no_proxies': "目前没有可用的代理。",
+        'country': "国家",
+        'host': "主机",
+        'port': "端口",
+        'secret': "密钥",
+        'uptime': "在线时间",
+        'ping': "延迟",
+        'upload': "上传",
+        'download': "下载",
+        'added_on': "添加于",
+        'choose_language': "请选择您的语言："
+    }
 }
 
 # Cache para armazenar proxies
@@ -86,16 +187,16 @@ def fetch_proxies(proxy_type, language):
         data = response.json()
     except requests.RequestException as e:
         logging.error(f"Erro ao buscar proxies {proxy_type}: {e}")
-        return [], language['no_proxies_msg']
+        return [], language['no_proxies']
 
     if data and isinstance(data, list):
         filtered_proxies = sorted(
-            (proxy for proxy in data if proxy.get('ping', float('inf')) <= 500),
-            key=lambda x: x['ping']
+            (proxy for proxy in data if proxy.get('ping', float('inf')) <= 300 and proxy.get('uptime', 0) >= 95),
+            key=lambda x: (x['ping'], -x['uptime'])
         )[:10]
 
         if not filtered_proxies:
-            return [], language['no_proxies_msg']
+            return [], language['no_proxies']
 
         buttons = []
         proxy_info_texts = []
@@ -109,6 +210,7 @@ def fetch_proxies(proxy_type, language):
             buttons.append([InlineKeyboardButton(label_connect, url=url_connect)])
             proxy_info_texts.append(format_proxy_info(proxy, proxy_type, language))
 
+        # Adiciona botões de atualizar e trocar protocolo
         buttons.append([InlineKeyboardButton(language['refresh_button'], callback_data=proxy_type)])
         buttons.append([InlineKeyboardButton(
             language['switch_to_mtproto'] if proxy_type == 'socks' else language['switch_to_socks'],
@@ -121,7 +223,7 @@ def fetch_proxies(proxy_type, language):
         }
         return buttons, "\n\n".join(proxy_info_texts)
 
-    return [], language['no_proxies_msg']
+    return [], language['no_proxies']
 
 def format_proxy_info(proxy, proxy_type, language):
     """Formata informações do proxy para exibição ao usuário."""
@@ -132,14 +234,18 @@ def format_proxy_info(proxy, proxy_type, language):
         f"🔑 {language['secret']}: {proxy.get('secret', 'N/A')}\n"
         f"📈 {language['uptime']}: {proxy.get('uptime', 'N/A')}%\n"
         f"📶 {language['ping']}: {proxy.get('ping', 'N/A')} ms\n"
-        f"📅 {language['added_on']}: {convert_timestamp(proxy.get('addTime', datetime.now().timestamp()))}"
+        f"📅 {language['added_on']}: {convert_timestamp(proxy['addTime'])}"
     )
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Exibe as opções de idioma ao usuário quando o comando /start é enviado."""
     keyboard = [
         [InlineKeyboardButton("🏴 English", callback_data='lang_en'),
-         InlineKeyboardButton("🇧🇷 Português", callback_data='lang_pt')]
+         InlineKeyboardButton("🇧🇷 Português", callback_data='lang_pt')],
+        [InlineKeyboardButton("🇷🇺 Русский", callback_data='lang_ru'),
+         InlineKeyboardButton("🇵🇸 العربية", callback_data='lang_ar')],
+        [InlineKeyboardButton("🇦🇷 Español", callback_data='lang_es'),
+         InlineKeyboardButton("🇨🇳 中文", callback_data='lang_zh')]
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
     await update.message.reply_text("Please choose your language:", reply_markup=reply_markup)
@@ -174,11 +280,16 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
 
         if proxy_info_text:
             reply_markup = InlineKeyboardMarkup(buttons)
-            await query.message.reply_text(proxy_info_text, reply_markup=reply_markup)
+            await query.message.reply_text(
+                f"{translation['mtproto_msg'] if query.data == 'mtproto' else translation['socks_msg']}\n\n{proxy_info_text}",
+                reply_markup=reply_markup
+            )
+        else:
+            await query.message.reply_text(translation['no_proxies'])
 
 def main() -> None:
     """Inicializa o bot e configura os handlers."""
-    application = Application.builder().token(TOKEN).build()
+    application = Application.builder().token(token).build()
 
     application.add_handler(CommandHandler("start", start))
     application.add_handler(CallbackQueryHandler(button_handler))
@@ -187,3 +298,5 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+
