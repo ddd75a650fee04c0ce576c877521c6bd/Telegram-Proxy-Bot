@@ -40,6 +40,11 @@ bc1qrek6np43y9gmnq02zdc72awrsga4mv7ysl6d8aer2hcwwm73t8yslhu30s
 XuTDrcVfaqwfrMdkqcH9kzd37YSZSdhTkZ
 ```
 
+[![Dogecoin](https://img.shields.io/badge/Doge-BitInfoCharts↗-B59A30?style=for-the-badge&logo=dogecoin&logoColor=white)](https://bitinfocharts.com/dogecoin/address/DSZydDKcBgT5JT8xkhthH6wZjVBRXn86kg)
+```
+DSZydDKcBgT5JT8xkhthH6wZjVBRXn86kg
+```
+
 [![Ethereum](https://img.shields.io/badge/Ethereum-Etherscan↗-3C3C3D?style=for-the-badge&logo=ethereum&logoColor=white)](https://etherscan.io/address/0x6848FcF06ab5847dCe80F41D60C3671058EE1C61)
 ```
 0x6848FcF06ab5847dCe80F41D60C3671058EE1C61
@@ -73,6 +78,11 @@ GBXPMALWU7EBZNA6AZKCSNLNVOYCWQVQBT4FDRX2MEGXOPYJGHFBX2WS
 [![TONcoin](https://img.shields.io/badge/TONcoin-Tonscan↗-265CB3?style=for-the-badge&logo=ton&logoColor=white)](https://tonscan.org/address/UQC006wiGYUtU3SpiCa-GJUTq37UYaDvqJaJtBrbvLPL0IBo)
 ```
 UQC006wiGYUtU3SpiCa-GJUTq37UYaDvqJaJtBrbvLPL0IBo
+```
+
+[![Xrp](https://img.shields.io/badge/Xrp-Blockchair↗-black?style=for-the-badge&logo=xrp&logoColor=white)](https://blockchair.com/xrp-ledger/account/rLJF167QK59uTaAb4CUESjRdXMHfYvbsAr)
+```
+rLJF167QK59uTaAb4CUESjRdXMHfYvbsAr
 ```
 
 [![Zcash](https://img.shields.io/badge/Zcash-Blockchair↗-F4B728?style=for-the-badge&logo=zcash&logoColor=black)](https://blockchair.com/zcash/address/zs1ucmw04kz5n4fsspm5xphjx8r7a9m62a0hsu8r0dk35y47xznqn6vq73ma44nr0r2emn6qcym363)
