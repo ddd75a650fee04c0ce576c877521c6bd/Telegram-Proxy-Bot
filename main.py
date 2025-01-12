@@ -1,22 +1,22 @@
+import os
 import logging
 from datetime import datetime, timedelta
 import requests
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Application, CommandHandler, CallbackQueryHandler, ContextTypes
-import os
+from dotenv import load_dotenv
 
-# Carrega o token dependendo do ambiente
-if 'token' in os.environ:
-    token = os.environ['token']  # Para Replit ou outro ambiente com variável de ambiente direta
+# Configuração do token
+if 'TOKEN' in os.environ:
+    TOKEN = os.environ['TOKEN']  # Para Replit ou outro ambiente com variável de ambiente direta
 else:
-    from dotenv import load_dotenv
     load_dotenv()  # Carrega variáveis do arquivo .env
-    token = os.getenv('token')
+    TOKEN = os.getenv('TOKEN')  # Nome da variável no .env é "TOKEN"
 
-# Verifica se o token foi carregado com sucesso
-if not token:
-    raise ValueError("Token não encontrado! Configure a variável 'token' corretamente no .env ou no ambiente.")
+if not TOKEN:
+    raise ValueError("Token não encontrado! Configure a variável 'TOKEN' corretamente no .env ou no ambiente.")
 
+# Configuração de logging
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     level=logging.INFO
@@ -79,7 +79,7 @@ LANGUAGES = {
         'switch_to_mtproto': "Cambiar a MTProto",
         'switch_to_socks': "Cambiar a SOCKS",
         'language_changed': "Idioma cambiado a español.",
-        'mtproto_msg': "Aquí están tus proxies MTProto:",
+        'mtproto_msg': "Aquí están tus MTProto proxies:",
         'socks_msg': "Aquí están tus SOCKS proxies:",
         'no_proxies': "No hay proxies disponibles en este momento.",
         'country': "País",
@@ -289,7 +289,7 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
 
 def main() -> None:
     """Inicializa o bot e configura os handlers."""
-    application = Application.builder().token(token).build()
+    application = Application.builder().token(TOKEN).build()
 
     application.add_handler(CommandHandler("start", start))
     application.add_handler(CallbackQueryHandler(button_handler))
@@ -298,5 +298,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
-
