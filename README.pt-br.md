@@ -60,7 +60,7 @@ ltc1qpax8azx06cqxhd807qc58qjwnhwlfyvgj95uge
 16Dbrrz68CXS5hGFD8iYmLSUtDf7wfyzkpmzqZ58FcdX8ZYR
 ```
 
-![Stellar](https://img.shields.io/badge/Stellar-GBXPMALWU7EBZNA6AZKCSNLNVOYCWQVQBT4FDRX2MEGXOPYJGHFBX2WS-7D00FF?style=for-the-badge&logo=stellar&logoColor=white)
+[![Stellar](https://img.shields.io/badge/Stellar-GBXPMALWU7EBZNA6AZKCSNLNVOYCWQVQBT4FDRX2MEGXOPYJGHFBX2WS-7D00FF?style=for-the-badge&logo=stellar&logoColor=white)](https://blockchair.com/stellar/address/GBXPMALWU7EBZNA6AZKCSNLNVOYCWQVQBT4FDRX2MEGXOPYJGHFBX2WS)
 ```
 GBXPMALWU7EBZNA6AZKCSNLNVOYCWQVQBT4FDRX2MEGXOPYJGHFBX2WS
 ```
