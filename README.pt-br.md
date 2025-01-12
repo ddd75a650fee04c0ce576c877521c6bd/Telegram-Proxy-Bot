@@ -50,7 +50,7 @@ XuTDrcVfaqwfrMdkqcH9kzd37YSZSdhTkZ
 ltc1qpax8azx06cqxhd807qc58qjwnhwlfyvgj95uge
 ```
 
-[![Monero](https://img.shields.io/badge/Monero-Explorer↗-9A8B7B?style=for-the-badge&logo=monero&logoColor=white)](https://moneroexplorer.org/search?value=83si1JPoiyB8CpRxUjmkXRBsFaL4DndBtcoCzDysL3BjDMicPKWf7cXXZbVFkuTKHBSsgcKYDtSokBrHJZ5L5oud81nP5XM)
+[![Monero](https://img.shields.io/badge/Monero-Moneroexplorer↗-9A8B7B?style=for-the-badge&logo=monero&logoColor=white)](https://moneroexplorer.org/search?value=83si1JPoiyB8CpRxUjmkXRBsFaL4DndBtcoCzDysL3BjDMicPKWf7cXXZbVFkuTKHBSsgcKYDtSokBrHJZ5L5oud81nP5XM)
 ```
 83si1JPoiyB8CpRxUjmkXRBsFaL4DndBtcoCzDysL3BjDMicPKWf7cXXZbVFkuTKHBSsgcKYDtSokBrHJZ5L5oud81nP5XM
 ```
