@@ -35,7 +35,7 @@ bc1qrek6np43y9gmnq02zdc72awrsga4mv7ysl6d8aer2hcwwm73t8yslhu30s
 0x6848FcF06ab5847dCe80F41D60C3671058EE1C61
 ```
 
-[![Dash](https://img.shields.io/badge/Dash-XuTDrcVfaqwfrMdkqcH9kzd37YSZSdhTkZ-008CE7?style=for-the-badge&logo=dash&logoColor=white)](https://explorer.dash.org/insight/address/XuTDrcVfaqwfrMdkqcH9kzd37YSZSdhTkZ)
+[![Dash](https://img.shields.io/badge/Dash-Explorer-008CE7?style=for-the-badge&logo=dash&logoColor=white)](https://explorer.dash.org/insight/address/XuTDrcVfaqwfrMdkqcH9kzd37YSZSdhTkZ)
 ```
 XuTDrcVfaqwfrMdkqcH9kzd37YSZSdhTkZ
 ```
@@ -60,7 +60,7 @@ ltc1qpax8azx06cqxhd807qc58qjwnhwlfyvgj95uge
 16Dbrrz68CXS5hGFD8iYmLSUtDf7wfyzkpmzqZ58FcdX8ZYR
 ```
 
-[![Stellar](https://img.shields.io/badge/Stellar-GBXPMALWU7EBZNA6AZKCSNLNVOYCWQVQBT4FDRX2MEGXOPYJGHFBX2WS-7D00FF?style=for-the-badge&logo=stellar&logoColor=white)](https://blockchair.com/stellar/address/GBXPMALWU7EBZNA6AZKCSNLNVOYCWQVQBT4FDRX2MEGXOPYJGHFBX2WS)
+[![Stellar](https://img.shields.io/badge/Stellar-Blockchair-7D00FF?style=for-the-badge&logo=stellar&logoColor=white)](https://blockchair.com/stellar/address/GBXPMALWU7EBZNA6AZKCSNLNVOYCWQVQBT4FDRX2MEGXOPYJGHFBX2WS)
 ```
 GBXPMALWU7EBZNA6AZKCSNLNVOYCWQVQBT4FDRX2MEGXOPYJGHFBX2WS
 ```
