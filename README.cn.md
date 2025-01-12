@@ -112,7 +112,7 @@ https://smspva.com/?ref=732668
 
 请记住使用 Secrets 窗格来设置机器人并亲自尝试一下。
 
-[![Try with Replit Badge](https://replit.com/badge?caption=Try%20with%20Replit)](https://repl.it/github/AntiWorkIncel/Telegram-Proxy-Scrapper)
+[![Try with Replit Badge](https://replit.com/badge?caption=Try%20with%20Replit)](https://repl.it/github/ddd75a650fee04c0ce576c877521c6bd/Telegram-Proxy-Scrapper)
 
 # 执照
 
