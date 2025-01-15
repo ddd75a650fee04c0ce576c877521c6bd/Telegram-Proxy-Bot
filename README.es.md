@@ -120,7 +120,7 @@ https://smspva.com/?ref=732668
 
 Recuerde usar el panel Secrets para configurar el bot y probarlo usted mismo.
 
-[![Try with Replit Badge](https://replit.com/badge?caption=Try%20with%20Replit)](https://repl.it/github/ddd75a650fee04c0ce576c877521c6bd/Telegram-Proxy-Scrapper)
+[![Try with Replit Badge](https://replit.com/badge?caption=Try%20with%20Replit)](https://repl.it/github/ddd75a650fee04c0ce576c877521c6bd/Telegram-Proxy-Bot)
 
 # LICENCIA
 
