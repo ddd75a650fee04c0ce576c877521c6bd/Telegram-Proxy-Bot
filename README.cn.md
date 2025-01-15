@@ -5,13 +5,11 @@
 [![pt-br](https://img.shields.io/badge/lang-pt--br-green.svg)](https://github.com/ddd75a650fee04c0ce576c877521c6bd/Telegram-Proxy-Scrapper/blob/main/README.pt-br.md)
 [![ru](https://img.shields.io/badge/lang-ru-white.svg)](https://github.com/ddd75a650fee04c0ce576c877521c6bd/Telegram-Proxy-Scrapper/blob/main/README.ru.md)
 
-# Telegram Proxy Scrapper 🤖
+# Telegram Proxy Bot 🤖
 
 Telegram 上的机器人从两个 API 返回 SOCKS5 和 MTProto 代理。机器人按最低 ping 值对代理列表进行索引。
 
 我制作了这个机器人，这样我就不再需要加入 Telegram 上的代理组了。
-
-您可以在 Replit 和本地使用它。
 
 # 捐:
 
