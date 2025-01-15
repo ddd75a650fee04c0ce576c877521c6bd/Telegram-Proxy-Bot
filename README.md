@@ -5,13 +5,11 @@
 [![pt-br](https://img.shields.io/badge/lang-pt--br-green.svg)](https://github.com/ddd75a650fee04c0ce576c877521c6bd/Telegram-Proxy-Scrapper/blob/main/README.pt-br.md)
 [![ru](https://img.shields.io/badge/lang-ru-white.svg)](https://github.com/ddd75a650fee04c0ce576c877521c6bd/Telegram-Proxy-Scrapper/blob/main/README.ru.md)
 
-# Telegram Proxy Scrapper 🤖
+# Telegram Proxy Bot 🤖
 
 Bot on Telegram that returns SOCKS5 and MTProto proxies from two APIs. The bot indexes the proxy lists by the lowest ping. 
 
 I made this bot so I no longer need to join proxy groups on Telegram.
-
-You can use it both in Replit and locally.
 
 # Donate:
 
