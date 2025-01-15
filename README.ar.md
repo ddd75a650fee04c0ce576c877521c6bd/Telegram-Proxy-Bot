@@ -5,13 +5,11 @@
 [![pt-br](https://img.shields.io/badge/lang-pt--br-green.svg)](https://github.com/ddd75a650fee04c0ce576c877521c6bd/Telegram-Proxy-Scrapper/blob/main/README.pt-br.md)
 [![ru](https://img.shields.io/badge/lang-ru-white.svg)](https://github.com/ddd75a650fee04c0ce576c877521c6bd/Telegram-Proxy-Scrapper/blob/main/README.ru.md)
 
-# Telegram Proxy Scrapper 🤖
+# Telegram Proxy Bot 🤖
 
 روبوت على Telegram يقوم بإرجاع وكلاء SOCKS5 وMTProto من واجهتي برمجة التطبيقات. يقوم الروبوت بفهرسة قوائم الوكيل حسب أقل اختبار ping.
 
 لقد أنشأت هذا الروبوت، لذا لم أعد بحاجة إلى الانضمام إلى مجموعات الوكيل على Telegram.
-
-يمكنك استخدامه في Replit ومحليًا.
 
 # يتبرع:
 
