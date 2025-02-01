@@ -8,13 +8,17 @@ from dotenv import load_dotenv
 
 # Configuração do token
 if 'TOKEN' in os.environ:
-    TOKEN = os.environ['TOKEN']  # Para o Replit
+    TOKEN = os.environ['TOKEN']  # Para ambientes como Replit
 else:
     load_dotenv()  # Carrega variáveis do arquivo .env
-    TOKEN = os.getenv('TOKEN')  # .env local
+    TOKEN = os.getenv('TOKEN')  # Para execução local com .env
 
+# Permite que o usuário defina o token diretamente no main.py
 if not TOKEN:
-    raise ValueError("Token não encontrado! Configure a variável 'TOKEN' corretamente no .env ou no ambiente.")
+    TOKEN = "SEU_TOKEN_AQUI"  # Substitua por seu token diretamente no código
+
+if not TOKEN or TOKEN == "SEU_TOKEN_AQUI":
+    raise ValueError("Token não encontrado! Configure a variável 'TOKEN' no ambiente, .env ou diretamente no main.py.")
 
 # Configuração de logging
 logging.basicConfig(
